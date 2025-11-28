@@ -36,7 +36,7 @@ navigate("/")
 
 return ( <div className="admin-signup-page"> <div className="conta"> <h2>Admin Signup</h2>
 
-```
+
     <form onSubmit={handleSubmit}>
       <input
         placeholder="Name"
