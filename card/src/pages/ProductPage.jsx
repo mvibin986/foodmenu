@@ -5,22 +5,22 @@ import '../css/apro.css'
 export default function ProductPage() {
   const [products, setProducts] = useState([]);
   const [form, setForm] = useState({ name: "", price: "", category: "" });
-  const [editingId, setEditingId] = useState(null); // <-- Track which product is being updated
+  const [editingId, setEditingId] = useState(null); 
 
-  // Fetch all products
+  
   const fetchProducts = async () => {
     const res = await API.get("/products");
     setProducts(res.data);
   };
 
-  // Add new product
+  
   const addProduct = async () => {
     await API.post("/products", form);
     setForm({ name: "", price: "", category: "" });
     fetchProducts();
   };
 
-  // Start editing (fill form)
+  
   const startEdit = (product) => {
     setEditingId(product.id);
     setForm({
@@ -30,7 +30,7 @@ export default function ProductPage() {
     });
   };
 
-  // Update product
+  
   const updateProduct = async () => {
     await API.put(`/products/${editingId}`, form);
     setEditingId(null);
@@ -38,7 +38,7 @@ export default function ProductPage() {
     fetchProducts();
   };
 
-  // Delete
+  
   const deleteProduct = async (id) => {
     await API.delete(`/products/${id}`);
     fetchProducts();
