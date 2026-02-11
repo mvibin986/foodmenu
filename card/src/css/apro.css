@@ -1,156 +1,112 @@
+/* Fullscreen background */
 .product-page {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #e0f7fa, #f1ffff); 
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  min-height: 100vh;
-  width: 99vw;
-  margin: 0;
   padding: 40px 0;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  box-sizing: border-box;
+  color: #003c3c;
 }
 
+/* Main container */
 .container {
+  width: 600px !important;
   background: #ffffff;
-  padding: 40px 30px;
-  border-radius: 12px;
-  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.4);
-  width: 100%;
-  max-width: 500px;
-  text-align: left;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.12);
+  border: 1px solid #d9f4f4;
 }
 
-.container h2 {
-  margin: 0 0 24px;
-  color: #0f172a;
-  font-size: 1.8rem;
+/* Headings */
+h2, h3 {
   text-align: center;
+  color: #006c6c;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
-.container h3 {
-  margin: 24px 0 16px;
-  color: #1e293b;
-  font-size: 1.2rem;
-}
-
-
+/* Inputs */
 .container input {
   width: 100%;
-  padding: 12px 14px;
-  font-size: 0.95rem;
-  border-radius: 8px;
-  border: 1.5px solid #cbd5f5;
-  background: #f1f5f9;
-  box-sizing: border-box;
-  outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-  color: #0f172a;
+  padding: 12px;
   margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #9cdfe0;
+  background: #f7ffff;
+  color: #004c4c;
+  outline: none;
+  transition: 0.3s;
 }
 
 .container input:focus {
-  border-color: #14b8a6;
+  border-color: #42c7c8;
   background: #ffffff;
-  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.35);
 }
 
-
-.container > button {
+/* Add / Update button */
+.container button {
   width: 25%;
+  padding: 12px;
   border: none;
+  background: #54d6c0;
+  color: white;
+  font-size: 16px;
   border-radius: 8px;
-  padding: 12px 0;
-  margin-top: 4px;
-  background: linear-gradient(135deg, #14b8a6, #0d9488);
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 0.98rem;
   cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  margin-top: 10px;
+  transition: 0.3s;
 }
 
+.container button:hover {
+  background: #34bea8;
+}
 
-
+/* Product card */
 .product-box {
-  background-color: #09a1f3;
-  border-radius: 8px;
-  padding: 12px 16px;
-  margin-bottom: 12px;
+  background: #f7ffff;
+  margin-top: 15px;
+  padding: 14px;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid #c8eeee;
 }
 
-
-.product-info {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+/* Text inside product card */
+.product-box b {
+  width: 30%;
+  font-size: 14px;
+  color: #005f5f;
 }
 
-
-.product-line {
-  font-size: 0.95rem;
-  color: #0f172a;
-}
-
-
-.product-actions {
-  display: flex;
-  gap: 10px;
-}
-
-
-.product-actions button {
-  min-width: 90px;
-  padding: 8px 18px;
-  border-radius: 8px;
+/* Edit button */
+.product-box button:first-of-type {
+  padding: 7px 12px;
   border: none;
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 0.9rem;
+  border-radius: 7px;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.15s ease,
-    box-shadow 0.15s ease;
+  background: #7bd6ff;
+  color: #00344f;
 }
 
-.product-actions button:first-of-type {
-  background: linear-gradient(135deg, #22c55e, #16a34a);
-  box-shadow: 0 3px 10px rgba(22, 163, 74, 0.45);
+.product-box button:first-of-type:hover {
+  background: #4ec0ff;
 }
 
-.product-actions button:first-of-type:hover {
-  background: #15803d;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(22, 163, 74, 0.55);
+/* Delete button */
+.product-box button:last-of-type {
+  padding: 7px 12px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  background: #ff7c7c;
+  color: white;
 }
 
-
-.product-actions button:last-of-type {
-  background: linear-gradient(135deg, #f97373, #ef4444);
-  box-shadow: 0 3px 10px rgba(248, 113, 113, 0.5);
-}
-
-.product-actions button:last-of-type:hover {
-  background: #dc2626;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(248, 113, 113, 0.6);
-}
-
-
-@media (max-width: 480px) {
-  .container {
-    padding: 30px 20px;
-  }
-
-  .product-box {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .product-actions {
-    width: 100%;
-    justify-content: flex-end;
-  }
+.product-box button:last-of-type:hover {
+  background: #ff5454;
 }

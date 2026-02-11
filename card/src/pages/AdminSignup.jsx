@@ -31,7 +31,7 @@ try {
 };
 
 function handlelogin(){
-navigate("/")
+navigate("/login");
 }
 
 return ( <div className="admin-signup-page"> <div className="conta"> <h2>Admin Signup</h2>

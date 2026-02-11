@@ -21,7 +21,6 @@
 
 import express from "express";
 import cors from "cors";
-// import './config/db.js';
 import dotenv from "dotenv";
 
 import adminRoutes from './routes/adminRoutes.js';
